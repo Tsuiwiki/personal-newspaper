@@ -34,6 +34,16 @@ npm run dev          # 同时起后端与前端
 | `npm test` | 后端测试（SSRF、API 契约、Feed 解析、去重、采集、正文提取、模板与编排、定时任务与时区，共 72 个用例） |
 | `npm run typecheck` | 后端 `tsc --noEmit` + 前端 `vue-tsc --noEmit` |
 | `npm run build` | 构建前端静态产物到 `apps/web/dist` |
+| `npm run build:site` | 导出只读站点到 `dist-site`（见下） |
+
+### 导出只读站点
+
+`npm run build:site` 读本机数据库，把**已出版**的期次连同版面快照、已保存正文导出成一个独立的静态站点
+（`dist-site`）：不调用 `/api`，也没有采集、编辑和笔记入口。导出走字段白名单，阅读记录、笔记、订阅令牌
+和数据库文件都不会进产物。
+
+挂在子路径下（例如 GitHub Pages 项目站点 `/<仓库名>/`）时用 `PAPER_SITE_BASE=/<仓库名>/` 指定前缀，
+资源地址与站内插图会跟着前缀走。本站点的线上版本就是 `gh-pages` 分支上的导出产物。
 
 ### 版本为什么钉死
 
