@@ -103,10 +103,30 @@ export function createPublishedSnapshot(db: Database.Database): PublishedSnapsho
   })();
 }
 
+/** 子路径部署（如 GitHub Pages 项目站点 /personal-newspaper/）时，站内图片要跟 base 一起挪 */
+export function withBase(snapshot: PublishedSnapshot, base: string): PublishedSnapshot {
+  if (base === '/') return snapshot;
+  return {
+    ...snapshot,
+    issues: snapshot.issues.map(issue => ({
+      ...issue,
+      sections: issue.sections.map(section => ({
+        ...section,
+        articles: section.articles.map(article => article.imageUrl?.startsWith('/media/')
+          ? { ...article, imageUrl: `${base}${article.imageUrl.slice(1)}` }
+          : article),
+      })),
+    })),
+  };
+}
+
 async function main() {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
   const webRoot = join(root, 'apps/web');
   const output = join(root, 'dist-site');
+  const rawBase = process.env.PAPER_SITE_BASE ?? '/';
+  if (!rawBase.startsWith('/') || !rawBase.endsWith('/')) throw new Error('PAPER_SITE_BASE 必须以 / 开头并以 / 结尾。');
+  const base = rawBase;
   const db = new Database(join(root, 'data/newspaper.db'), { readonly: true, fileMustExist: true });
   let snapshot: PublishedSnapshot;
   try { snapshot = createPublishedSnapshot(db); } finally { db.close(); }
@@ -120,9 +140,11 @@ async function main() {
       throw new Error('发布图片包含活动内容或外部资源。');
     }
   }
+  snapshot = withBase(snapshot, base);
   await build({
     configFile: false,
     root: webRoot,
+    base,
     publicDir: false,
     plugins: [vue(), {
       name: 'published-paper-data',
@@ -135,7 +157,7 @@ async function main() {
   if (media.size) await mkdir(join(output, 'media'), { recursive: true });
   for (const image of media) await copyFile(join(webRoot, 'public', image), join(output, image));
   const articles = snapshot.issues.flatMap(issue => issue.sections.flatMap(section => section.articles));
-  console.log(JSON.stringify({ issues: snapshot.issues.length, articles: articles.length,
+  console.log(JSON.stringify({ base, issues: snapshot.issues.length, articles: articles.length,
     savedBodies: articles.filter(article => article.hasFullText).length, localImages: media.size }));
 }
 

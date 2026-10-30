@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import Database from 'better-sqlite3';
-import { createPublishedSnapshot, publicUrl } from './export-site.js';
+import { createPublishedSnapshot, publicUrl, withBase } from './export-site.js';
 
 function fixture() {
   const db = new Database(':memory:');
@@ -65,4 +65,18 @@ test('placeholder, credential-bearing, local and unsafe links are not published'
     assert.equal(publicUrl(url), '');
   }
   assert.equal(publicUrl('https://example.com/article#heading'), 'https://example.com/article');
+});
+
+test('subpath deployment moves local images under the base and leaves external ones alone', () => {
+  const db = fixture();
+  try {
+    db.exec("UPDATE articles SET image_url = '/media/card-notes.svg' WHERE id = 1");
+    db.exec("UPDATE issue_articles SET display_snapshot_json = '{}' WHERE issue_id = 1");
+    const root = createPublishedSnapshot(db);
+    const hosted = withBase(root, '/personal-newspaper/');
+    const card = hosted.issues[0]!.sections[0]!.articles[0]!;
+    assert.equal(card.imageUrl, '/personal-newspaper/media/card-notes.svg');
+    assert.equal(root.issues[0]!.sections[0]!.articles[0]!.imageUrl, '/media/card-notes.svg');
+    assert.equal(withBase(root, '/'), root);
+  } finally { db.close(); }
 });
