@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="一页手写笔记">
+  <rect width="800" height="450" fill="#e7dfca" />
+  <g transform="rotate(-3 400 225)">
+    <rect x="248" y="52" width="330" height="360" fill="#f6f0e0" stroke="#bcb096" />
+    <rect x="284" y="92" width="180" height="16" fill="#3b352b" opacity="0.75" />
+    <rect x="284" y="122" width="258" height="1.5" fill="#bcb096" />
+    <g fill="#c6b99d">
+      <rect x="284" y="146" width="258" height="6" />
+      <rect x="284" y="164" width="238" height="6" />
+      <rect x="284" y="182" width="258" height="6" />
+      <rect x="284" y="200" width="196" height="6" />
+      <rect x="284" y="228" width="258" height="6" />
+      <rect x="284" y="246" width="222" height="6" />
+      <rect x="284" y="264" width="258" height="6" />
+      <rect x="284" y="282" width="170" height="6" />
+    </g>
+    <rect x="284" y="318" width="96" height="52" fill="none" stroke="#b7ab90" />
+    <rect x="400" y="318" width="142" height="52" fill="none" stroke="#b7ab90" />
+    <circle cx="540" cy="92" r="9" fill="none" stroke="#8a2b1e" stroke-width="1.5" />
+  </g>
+  <g stroke="#d3c7ad">
+    <line x1="0" y1="392" x2="800" y2="392" />
+    <line x1="0" y1="404" x2="800" y2="404" />
+  </g>
+</svg>

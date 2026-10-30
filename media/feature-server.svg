@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="机房里的服务机架">
+  <rect width="1200" height="675" fill="#e9e1cd" />
+  <g stroke="#bfb298" fill="#f2ebda">
+    <rect x="150" y="120" width="900" height="86" />
+    <rect x="150" y="230" width="900" height="86" />
+    <rect x="150" y="340" width="900" height="86" />
+    <rect x="150" y="450" width="900" height="86" />
+  </g>
+  <g fill="#c9bda2">
+    <rect x="180" y="150" width="70" height="26" />
+    <rect x="262" y="150" width="70" height="26" />
+    <rect x="180" y="260" width="70" height="26" />
+    <rect x="262" y="260" width="70" height="26" />
+    <rect x="180" y="370" width="70" height="26" />
+    <rect x="262" y="370" width="70" height="26" />
+    <rect x="180" y="480" width="70" height="26" />
+    <rect x="262" y="480" width="70" height="26" />
+  </g>
+  <g fill="#6b6353" opacity="0.55">
+    <circle cx="430" cy="163" r="5" />
+    <circle cx="462" cy="163" r="5" />
+    <circle cx="494" cy="163" r="5" />
+    <circle cx="430" cy="273" r="5" />
+    <circle cx="462" cy="273" r="5" />
+    <circle cx="494" cy="273" r="5" />
+    <circle cx="430" cy="383" r="5" />
+    <circle cx="462" cy="383" r="5" />
+    <circle cx="494" cy="383" r="5" />
+    <circle cx="430" cy="493" r="5" />
+    <circle cx="462" cy="493" r="5" />
+    <circle cx="494" cy="493" r="5" />
+  </g>
+  <circle cx="430" cy="383" r="5" fill="#8a2b1e" />
+  <g stroke="#c9bda2" stroke-width="1.5">
+    <line x1="560" y1="150" x2="1010" y2="150" />
+    <line x1="560" y1="182" x2="930" y2="182" />
+    <line x1="560" y1="260" x2="960" y2="260" />
+    <line x1="560" y1="292" x2="860" y2="292" />
+    <line x1="560" y1="370" x2="990" y2="370" />
+    <line x1="560" y1="402" x2="900" y2="402" />
+    <line x1="560" y1="480" x2="950" y2="480" />
+    <line x1="560" y1="512" x2="880" y2="512" />
+  </g>
+  <rect x="150" y="580" width="900" height="2" fill="#bcb096" />
+  <text x="150" y="616" font-family="Georgia, serif" font-size="17" fill="#7a7260" letter-spacing="6">HOME SERVER · 10 YEARS</text>
+</svg>

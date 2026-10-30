@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="数据库分层示意图">
+  <rect width="800" height="450" fill="#e8e0cb" />
+  <g transform="translate(400 225)">
+    <g fill="none" stroke="#a99d84" stroke-width="2">
+      <ellipse cx="0" cy="-96" rx="150" ry="38" />
+      <path d="M-150 -96 V-32 a150 38 0 0 0 300 0 V-96" />
+      <path d="M-150 -32 V32 a150 38 0 0 0 300 0 V-32" />
+      <path d="M-150 32 V96 a150 38 0 0 0 300 0 V32" />
+    </g>
+    <ellipse cx="0" cy="-96" rx="150" ry="38" fill="#f4eddc" stroke="#a99d84" stroke-width="2" />
+    <g stroke="#c4b79b" stroke-width="1.5">
+      <line x1="-96" y1="-32" x2="96" y2="-32" />
+      <line x1="-96" y1="32" x2="96" y2="32" />
+    </g>
+    <circle cx="0" cy="132" r="7" fill="#8a2b1e" />
+    <line x1="0" y1="96" x2="0" y2="125" stroke="#8a2b1e" stroke-width="1.5" />
+  </g>
+  <g stroke="#d3c7ad">
+    <line x1="60" y1="60" x2="740" y2="60" stroke-width="1" />
+  </g>
+</svg>
