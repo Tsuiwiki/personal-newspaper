@@ -1,0 +1,28 @@
+{
+  "name": "@paper/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "seed": "tsx src/db/seed.ts",
+    "test": "node --import tsx --test test/url-guard.test.ts test/api.test.ts test/feed-parser.test.ts test/ingest.test.ts test/sources-api.test.ts test/extraction.test.ts test/phase3.test.ts test/phase4.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mozilla/readability": "0.5.0",
+    "@paper/shared": "*",
+    "better-sqlite3": "11.10.0",
+    "fast-xml-parser": "^5.11.2",
+    "fastify": "^5.12.7",
+    "linkedom": "0.18.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.17.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

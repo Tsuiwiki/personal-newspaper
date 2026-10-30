@@ -1,0 +1,23 @@
+{
+  "name": "personal-newspaper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:server": "npm run dev -w @paper/server",
+    "dev:web": "npm run dev -w @paper/web",
+    "db:seed": "npm run seed -w @paper/server",
+    "test": "npm run test -w @paper/server",
+    "typecheck": "npm run typecheck -w @paper/server && npm run typecheck -w @paper/web",
+    "build": "npm run build -w @paper/web",
+    "build:site": "node --import tsx scripts/export-site.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

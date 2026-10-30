@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="叠放的报纸">
+  <defs>
+    <linearGradient id="bg-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ebe4d2" />
+      <stop offset="1" stop-color="#ded5bd" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg-a)" />
+  <g fill="#000" opacity="0.05">
+    <rect x="70" y="118" width="470" height="440" rx="2" transform="rotate(-2 305 338)" />
+    <rect x="640" y="150" width="470" height="440" rx="2" transform="rotate(1.5 875 370)" />
+  </g>
+  <g transform="rotate(-2 305 338)">
+    <rect x="64" y="110" width="470" height="440" rx="2" fill="#f4eddc" stroke="#bcb096" />
+    <rect x="96" y="146" width="286" height="20" fill="#3b352b" opacity="0.82" />
+    <rect x="96" y="182" width="406" height="1.5" fill="#bcb096" />
+    <rect x="96" y="204" width="250" height="26" fill="#4a4335" opacity="0.55" />
+    <g fill="#c3b69a">
+      <rect x="96" y="250" width="190" height="7" />
+      <rect x="96" y="268" width="190" height="7" />
+      <rect x="96" y="286" width="160" height="7" />
+      <rect x="96" y="318" width="190" height="7" />
+      <rect x="96" y="336" width="190" height="7" />
+      <rect x="96" y="354" width="126" height="7" />
+      <rect x="312" y="250" width="190" height="7" />
+      <rect x="312" y="268" width="190" height="7" />
+      <rect x="312" y="286" width="150" height="7" />
+      <rect x="312" y="318" width="190" height="7" />
+      <rect x="312" y="336" width="120" height="7" />
+    </g>
+    <rect x="96" y="394" width="406" height="118" fill="#ded4bb" />
+    <rect x="96" y="394" width="406" height="118" fill="none" stroke="#bcb096" />
+  </g>
+  <g transform="rotate(1.5 875 370)">
+    <rect x="634" y="142" width="470" height="440" rx="2" fill="#f0e8d6" stroke="#bcb096" />
+    <rect x="666" y="178" width="240" height="18" fill="#8a2b1e" opacity="0.75" />
+    <rect x="666" y="210" width="406" height="1.5" fill="#bcb096" />
+    <rect x="666" y="232" width="330" height="30" fill="#4a4335" opacity="0.45" />
+    <g fill="#c3b69a">
+      <rect x="666" y="284" width="406" height="7" />
+      <rect x="666" y="302" width="406" height="7" />
+      <rect x="666" y="320" width="300" height="7" />
+      <rect x="666" y="352" width="406" height="7" />
+      <rect x="666" y="370" width="360" height="7" />
+      <rect x="666" y="388" width="250" height="7" />
+    </g>
+    <g fill="none" stroke="#b7ab90">
+      <rect x="666" y="426" width="192" height="112" />
+      <rect x="880" y="426" width="192" height="112" />
+    </g>
+  </g>
+</svg>
